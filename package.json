@@ -12,5 +12,8 @@
   "dependencies": {
     "@astrojs/mdx": "^0.19.1",
     "astro": "^2.4.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
