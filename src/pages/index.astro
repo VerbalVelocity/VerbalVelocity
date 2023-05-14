@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="inner">
+      <h1>Welcome to <span class="text-gradient">Verbal Velocity</span></h1>
+      <p class="instructions">
+        We <code>right</code> when we <code>write</code>.<br />
+        Or is it the other way around.
+      </p>
+      <ul role="list" class="link-card-grid">
+        <Card
+          href="#coming-soon"
+          title="Blogs"
+          body="Gotta document this journey."
+        />
+        <Card
+          href="#coming-soon"
+          title="Fiction"
+          body="Sometimes I write fiction. Keeps me up at night."
+        />
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  html {
+    color: black;
+    background-color: rgb(222, 213, 224);
+  }
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 40rem;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    font-weight: 500;
+
+    font-family: monospace;
+    text-align: center;
+
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  .instructions code {
+    cursor: pointer;
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 20%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+</style>
