@@ -16,11 +16,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div class="outer">
+    <div class="m-0 min-h-screen flex flex-col justify-center items-center">
       <slot />
-      <footer>
+      <footer class="flex justify-center items-center h-6 justify-self-center">
         <a href="https://github.com/VerbalVelocity/VerbalVelocity">
-          <img src="/VerbalVelocity/github.svg" />
+          <img class="w-6 h-6 my-6" src="/VerbalVelocity/github.svg" />
         </a>
       </footer>
     </div>
@@ -45,30 +45,6 @@ const { title } = Astro.props;
     margin: 0;
   }
 
-  .outer {
-    margin: 0;
-
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-
-    /* align-self: flex-end; */
-    justify-self: end;
-  }
-
-  footer img {
-    width: 25px;
-    height: 50px;
-  }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;

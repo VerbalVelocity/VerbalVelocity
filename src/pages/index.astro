@@ -3,17 +3,21 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="Verbal Velocity | We right when we write">
-  <main>
+<Layout title="Verbal Velocity | We right when we write.">
+  <main class="p-5 max-w-[42rem]">
     <div class="inner">
-      <h1>
+      <h1 class="text-center text-5xl font-extrabold m-0">
         Welcome to <span class="text-gradient">Verbal Velocity</span>
       </h1>
-      <p class="instructions">
-        We <code>right</code> when we <code>write</code>.<br />
+      <p class="font-medium font-mono text-center text-sm my-4 p-4">
+        We <code class="px-1 py-1 cursor-pointer text-sm font-bold rounded"
+          >right</code
+        > when we <code
+          class="px-1 py-1 cursor-pointer text-sm font-bold rounded">write</code
+        >.<br />
         Or is it the other way around.
       </p>
-      <ul role="list" class="link-card-grid">
+      <ul role="list" class="grid gap-4 link-card-grid p-0">
         <Card
           href="#coming-soon"
           title="Blogs"
@@ -34,50 +38,20 @@ import Card from "../components/Card.astro";
     color: black;
     background-color: rgb(222, 213, 224);
   }
-  main {
-    padding: 1.5rem;
-    max-width: 40rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-
   .text-gradient {
-    background-image: var(--accent-gradient);
+    background: rgb(200, 58, 237);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
   }
-  .instructions {
-    font-weight: 500;
 
-    font-family: monospace;
-    text-align: center;
+  code {
+    background: rgba(200, 58, 237, 0.2);
+    color: rgb(200, 58, 237);
+  }
 
-    line-height: 1.6;
-    margin: 1rem 0;
-    padding: 1rem;
-  }
-  .instructions code {
-    cursor: pointer;
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 20%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
   .link-card-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
   }
 </style>
